@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Trajes de Spiderman</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333;">
+
+    <!-- El encabezado principal con el nombre de la tienda en color rojo -->
+    <header id="inicio" style="background-color: #d11a2a; color: white; text-align: center; padding: 20px 10px;">
+        <h1 style="margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px;">
+            SpiderSuits 
+        </h1>
+        <p style="margin: 5px 0 0 0; font-style: italic;">Consigue el traje perfecto para salvar el multiverso</p>
+    </header>
+
+    <!-- Menu de navegacion de color azul que se queda fijo arriba al bajar por la pagina -->
+    <nav style="background-color: #1a365d; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 1000;">
+        <a href="#inicio" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold;">Inicio</a>
+        <a href="#login" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold;">Iniciar Sesion</a>
+        <a href="#registro" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold;">Registrarse</a>
+    </nav>
+
+    <!-- Aqui empieza todo el bloque fuerte de contenido que va centrado en la pantalla -->
+    <main style="max-width: 1200px; margin: 20px auto; padding: 0 20px;">
+        
+        <h2 style="text-align: center; color: #1a365d;">Trajes Disponibles</h2>
+        
+        <!-- Esto acomoda las tarjetas de los trajes una al lado de la otra de forma limpia -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+
+            <!-- Tarjeta del primer producto-->
+            <article style="width: 250px; text-align: center; border: 1px solid #ccc; padding: 10px; background-color: white;">
+                <img src="spider1.png" alt="Traje Clásico" style="width: 100%;">
+                <h3>Traje Clasico</h3>
+                <p>El iconico diseño rojo y azul con patron de telaraña de la pelicula Spiderman de Toby Maguire.</p>
+                <p><b>$90.00</b></p>
+                <button style="width: 100%; cursor: pointer;">Comprar</button>
+            </article>
+
+            <!-- Tarjeta del segundo producto -->
+            <article style="width: 250px; text-align: center; border: 1px solid #ccc; padding: 10px; background-color: white;">
+                <img src="spider2.png" alt="Traje Miles Morales" style="width: 100%;">
+                <h3>Traje The Amazing Spiderman</h3>
+                <p>Traje del spiderman de Andrew Garfield de TAMS-2, color rojo con azul.</p>
+                <p><b>$95.00</b></p>
+                <button style="width: 100%; cursor: pointer;">Comprar</button>
+            </article>
+
+            <!-- Tarjeta del tercer producto-->
+            <article style="width: 250px; text-align: center; border: 1px solid #ccc; padding: 10px; background-color: white;">
+                <img src="spider3.png" alt="Traje Simbionte" style="width: 100%;">
+                <h3>Traje Brand New Day</h3>
+                <p>Traje del spiderman de Tom Holland de la pelicula mas reciente de spiderman.</p>
+                <p><b>$95.00</b></p>
+                <button style="width: 100%; cursor: pointer;">Comprar</button>
+            </article>
+
+            <!-- Tarjeta del cuarto producto-->
+            <article style="width: 250px; text-align: center; border: 1px solid #ccc; padding: 10px; background-color: white;">
+                <img src="spider4.png" alt="Traje Simbionte" style="width: 100%;">
+                <h3>Traje Simbionte</h3>
+                <p>Edicion alienigena completamente negra de la pelicula de Spiderman 3.</p>
+                <p><b>$110.00</b></p>
+                <button style="width: 100%; cursor: pointer;">Comprar</button>
+            </article>
+
+        </div>
+
+        <!-- Bloque invisible para dar espacio vertical entre las tarjetas y el inicio de sesion -->
+        <div style="height: 300px;"></div>
+
+        <!-- Cuadro con el formulario para que los clientes ya registrados entren a su cuenta -->
+        <section id="login" style="max-width: 400px; margin: 60px auto 20px auto; padding: 20px; border: 1px solid #ccc; background-color: white; text-align: center;">
+            <h2 style="color: #1a365d; margin-top: 0;">Iniciar Sesion</h2>
+            <form action="conexion.php" method="POST">
+                <input type="hidden" name="accion" value="login">
+                
+                <!-- Campo para escribir el email del usuario -->
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label for="login-correo" style="display: block; margin-bottom: 5px; font-weight: bold;">Correo Electronico:</label>
+                    <input type="email" id="login-correo" name="correo" required style="width: 94%; padding: 8px; border: 1px solid #ccc;">
+                </div>
+
+                <!-- Campo oculto para poner la contraseña de ingreso -->
+                <div style="margin-bottom: 20px; text-align: left;">
+                    <label for="login-password" style="display: block; margin-bottom: 5px; font-weight: bold;">Contraseña:</label>
+                    <input type="password" id="login-password" name="password" required style="width: 94%; padding: 8px; border: 1px solid #ccc;">
+                </div>
+
+                <button type="submit" style="width: 100%; padding: 10px; background-color: #1a365d; color: white; border: none; font-weight: bold; cursor: pointer;">Ingresar</button>
+            </form>
+        </section>
+
+        <!-- Otro bloque invisible para separar el login de la zona de registro -->
+        <div style="height: 300px;"></div>
+
+        <!-- Cuadro con el formulario completo para los usuarios nuevos que quieren una cuenta -->
+        <section id="registro" style="max-width: 400px; margin: 60px auto 20px auto; padding: 20px; border: 1px solid #ccc; background-color: white; text-align: center;">
+            <h2 style="color: #d11a2a; margin-top: 0;">Crear Cuenta</h2>
+            <form action="conexion.php" method="POST">
+                <input type="hidden" name="accion" value="registrar">
+                
+                <!-- Nombre publico de la cuenta nueva -->
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label for="reg-usuario" style="display: block; margin-bottom: 5px; font-weight: bold;">Usuario:</label>
+                    <input type="text" id="reg-usuario" name="usuario" required style="width: 94%; padding: 8px; border: 1px solid #ccc;">
+                </div>
+
+                <!-- Control basico de edad para el registro -->
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label for="reg-edad" style="display: block; margin-bottom: 5px; font-weight: bold;">Edad:</label>
+                    <input type="number" id="reg-edad" name="edad" required min="1" style="width: 94%; padding: 8px; border: 1px solid #ccc;">
+                </div>
+                
+                <!-- Correo electronico que servira de contacto y validacion -->
+                <div style="margin-bottom: 15px; text-align: left;">
+                    <label for="reg-correo" style="display: block; margin-bottom: 5px; font-weight: bold;">Correo Electronico:</label>
+                    <input type="email" id="reg-correo" name="correo" required style="width: 94%; padding: 8px; border: 1px solid #ccc;">
+                </div>
+
+                <!-- Clave secreta que se usara para proteger la nueva cuenta creada -->
+                <div style="margin-bottom: 20px; text-align: left;">
+                    <label for="reg-password" style="display: block; margin-bottom: 5px; font-weight: bold;">Contraseña:</label>
+                    <input type="password" id="reg-password" name="password" required style="width: 94%; padding: 8px; border: 1px solid #ccc;">
+                </div>
+
+                <button type="submit" style="width: 100%; padding: 10px; background-color: #d11a2a; color: white; border: none; font-weight: bold; cursor: pointer;">Registrarse</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Cierre de la pagina en color gris oscuro con mis datos personales de la escuela -->
+    <footer style="background-color: #333; color: white; text-align: center; padding: 15px; margin-top: 40px; font-size: 0.9rem;">
+        <p>Sanchez Dominguez Jose Alejandro</p>
+        <p>No°Contr:24308051280657</p>
+        <p>5ºI</p>
+    </footer>
+
+</body>
+</html>
